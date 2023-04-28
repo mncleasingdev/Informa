@@ -739,13 +739,6 @@ namespace DXMNCGUI_INFORMA.Shared
                         var xrTableCell93 = docInternalMemoDeviasi.FindControl("xrTableCell93", false);
                         var xrTableCell96 = docInternalMemoDeviasi.FindControl("xrTableCell96", false);
 
-                        var picBoxDeviasi61 = docInternalMemoDeviasi.FindControl("picBoxDeviasi61", false);
-                        var picBoxDeviasi62 = docInternalMemoDeviasi.FindControl("picBoxDeviasi62", false);
-                        var lblDeviasi60 = docInternalMemoDeviasi.FindControl("lblDeviasi60", false);
-                        var lblDeviasi70 = docInternalMemoDeviasi.FindControl("lblDeviasi70", false);
-                        var xrTableCell180 = docInternalMemoDeviasi.FindControl("xrTableCell180", false);
-                        var xrTableCell183 = docInternalMemoDeviasi.FindControl("xrTableCell183", false);
-
                         var lblHeadertext = docInternalMemoDeviasi.FindControl("lblHeadertext", false);
 
                         lblHeadertext.Text = "Bersama ini kami mangajukan permohonan persetujuan penyimpangan bagi debitur dengan rincian berikut:";
@@ -865,19 +858,7 @@ namespace DXMNCGUI_INFORMA.Shared
                                     xrTableCell93.Text = dataRow.Field<string>("Nama");
                                     xrTableCell96.Text = dataRow.Field<string>("Jabatan");
                                     break;
-                                case 8:
-                                    if (dataRow.Field<string>("IsDecision") == "T")
-                                    {
-                                        picBoxDeviasi61.Visible = dataRow.Field<string>("DecisionState") == "APPROVE" ? true : false;
-                                        picBoxDeviasi62.Visible = dataRow.Field<string>("DecisionState") == "REJECT" ? true : false;
-                                        lblDeviasi60.Visible = true;
-                                        lblDeviasi60.Text = "Date : " + dataRow.Field<DateTime>("DecisionDate").ToString("dd/MM/yyyy HH:mm:ss");
-                                        lblDeviasi70.Visible = true;
-                                        lblDeviasi70.Text = "Note : " + dataRow.Field<string>("DecisionNote");
-                                    }
-                                    xrTableCell180.Text = dataRow.Field<string>("Nama");
-                                    xrTableCell183.Text = dataRow.Field<string>("Jabatan");
-                                    break;
+
                             }
                         }
 
@@ -919,14 +900,13 @@ namespace DXMNCGUI_INFORMA.Shared
                         var picBoxException5 = docInternalMemoException.FindControl("picBoxException5", false);
                         var picBoxException6 = docInternalMemoException.FindControl("picBoxException6", false);
                         var lblException5 = docInternalMemoException.FindControl("lblException5", false);
-                        var lblException6 = docInternalMemoException.FindControl("lblException6", false);
+
                         var xrException22 = docInternalMemoException.FindControl("xrException22", false);
                         var xrException611 = docInternalMemoException.FindControl("xrException611", false);
 
                         var picBoxException7 = docInternalMemoException.FindControl("picBoxException7", false);
                         var picBoxException8 = docInternalMemoException.FindControl("picBoxException8", false);
                         var lblException7 = docInternalMemoException.FindControl("lblException7", false);
-                        var lblException8 = docInternalMemoException.FindControl("lblException8", false);
                         var xrException644 = docInternalMemoException.FindControl("xrException644", false);
                         var xrException300 = docInternalMemoException.FindControl("xrException300", false);
 
@@ -940,14 +920,12 @@ namespace DXMNCGUI_INFORMA.Shared
                         var picBoxException11 = docInternalMemoException.FindControl("picBoxException11", false);
                         var picBoxException12 = docInternalMemoException.FindControl("picBoxException12", false);
                         var lblException11 = docInternalMemoException.FindControl("lblException11", false);
-                        var lblException12 = docInternalMemoException.FindControl("lblException12", false);
                         var xrException35 = docInternalMemoException.FindControl("xrException35", false);
                         var xrException677 = docInternalMemoException.FindControl("xrException677", false);
 
                         var picBoxException13 = docInternalMemoException.FindControl("picBoxException13", false);
                         var picBoxException14 = docInternalMemoException.FindControl("picBoxException14", false);
                         var lblException13 = docInternalMemoException.FindControl("lblException13", false);
-                        var lblException14 = docInternalMemoException.FindControl("lblException14", false);
                         var xrException221 = docInternalMemoException.FindControl("xrException221", false);
                         var xrException351 = docInternalMemoException.FindControl("xrException351", false);
 
@@ -957,12 +935,18 @@ namespace DXMNCGUI_INFORMA.Shared
                         var picBoxException18 = docInternalMemoException.FindControl("picBoxException18", false);
                         var lblException15 = docInternalMemoException.FindControl("lblException15", false);
                         var lblException17 = docInternalMemoException.FindControl("lblException17", false);
-                        var lblException16 = docInternalMemoException.FindControl("lblException16", false);
-                        var lblException18 = docInternalMemoException.FindControl("lblException18", false);
                         var xrException83 = docInternalMemoException.FindControl("xrException83", false);
                         var xrException90 = docInternalMemoException.FindControl("xrException90", false);
                         var xrException95 = docInternalMemoException.FindControl("xrException95", false);
                         var xrException98 = docInternalMemoException.FindControl("xrException98", false);
+
+                        var xrTableCell75me = docInternalMemoException.FindControl("xrTableCell75", false);
+                        var xrTableCell66me = docInternalMemoException.FindControl("xrTableCell66", false);
+                        var xrTableCell60me = docInternalMemoException.FindControl("xrTableCell60", false);
+                        var xrTableCell82me = docInternalMemoException.FindControl("xrTableCell82", false);
+                        var xrTableCell19me = docInternalMemoException.FindControl("xrTableCell19", false);
+                        var xrTableCell72me = docInternalMemoException.FindControl("xrTableCell72", false);
+                        var xrTableCell94me = docInternalMemoException.FindControl("xrTableCell94", false);
 
                         foreach (DataRow dataRow in myTable.Rows)
                         {
@@ -1003,8 +987,8 @@ namespace DXMNCGUI_INFORMA.Shared
                                         picBoxException6.Visible = dataRow.Field<string>("DecisionState") == "REJECT" ? true : false;
                                         lblException5.Visible = true;
                                         lblException5.Text = "Date : " + dataRow.Field<DateTime>("DecisionDate").ToString("dd/MM/yyyy HH:mm:ss");
-                                        lblException6.Visible = true;
-                                        lblException6.Text = "Note : " + dataRow.Field<string>("DecisionNote");
+                                        xrTableCell75me.Visible = true;
+                                        xrTableCell75me.Text = "Note : " + dataRow.Field<string>("DecisionNote");
                                     }
                                     xrException22.Text = dataRow.Field<string>("Nama");
                                     xrException611.Text = dataRow.Field<string>("Jabatan");
@@ -1016,8 +1000,8 @@ namespace DXMNCGUI_INFORMA.Shared
                                         picBoxException8.Visible = dataRow.Field<string>("DecisionState") == "REJECT" ? true : false;
                                         lblException7.Visible = true;
                                         lblException7.Text = "Date : " + dataRow.Field<DateTime>("DecisionDate").ToString("dd/MM/yyyy HH:mm:ss");
-                                        lblException8.Visible = true;
-                                        lblException8.Text = "Note : " + dataRow.Field<string>("DecisionNote");
+                                        xrTableCell66me.Visible = true;
+                                        xrTableCell66me.Text = "Note : " + dataRow.Field<string>("DecisionNote");
                                     }
                                     xrException644.Text = dataRow.Field<string>("Nama");
                                     xrException300.Text = dataRow.Field<string>("Jabatan");
@@ -1029,8 +1013,8 @@ namespace DXMNCGUI_INFORMA.Shared
                                         picBoxException10.Visible = dataRow.Field<string>("DecisionState") == "REJECT" ? true : false;
                                         lblException9.Visible = true;
                                         lblException9.Text = "Date : " + dataRow.Field<DateTime>("DecisionDate").ToString("dd/MM/yyyy HH:mm:ss");
-                                        lblException10.Visible = true;
-                                        lblException10.Text = "Note : " + dataRow.Field<string>("DecisionNote");
+                                        xrTableCell60me.Visible = true;
+                                        xrTableCell60me.Text = "Note : " + dataRow.Field<string>("DecisionNote");
                                     }
                                     xrException833.Text = dataRow.Field<string>("Nama");
                                     xrException866.Text = dataRow.Field<string>("Jabatan");
@@ -1042,8 +1026,8 @@ namespace DXMNCGUI_INFORMA.Shared
                                         picBoxException12.Visible = dataRow.Field<string>("DecisionState") == "REJECT" ? true : false;
                                         lblException11.Visible = true;
                                         lblException11.Text = "Date : " + dataRow.Field<DateTime>("DecisionDate").ToString("dd/MM/yyyy HH:mm:ss");
-                                        lblException12.Visible = true;
-                                        lblException12.Text = "Note : " + dataRow.Field<string>("DecisionNote");
+                                        xrTableCell82me.Visible = true;
+                                        xrTableCell82me.Text = "Note : " + dataRow.Field<string>("DecisionNote");
                                     }
                                     xrException35.Text = dataRow.Field<string>("Nama");
                                     xrException677.Text = dataRow.Field<string>("Jabatan");
@@ -1055,8 +1039,9 @@ namespace DXMNCGUI_INFORMA.Shared
                                         picBoxException13.Visible = dataRow.Field<string>("DecisionState") == "REJECT" ? true : false;
                                         lblException13.Visible = true;
                                         lblException13.Text = "Date : " + dataRow.Field<DateTime>("DecisionDate").ToString("dd/MM/yyyy HH:mm:ss");
-                                        lblException14.Visible = true;
-                                        lblException14.Text = "Note : " + dataRow.Field<string>("DecisionNote");
+                                        xrTableCell19me.Visible = true;
+                                        xrTableCell19me.Text = "Note : " + dataRow.Field<string>("DecisionNote");
+
                                     }
                                     xrException221.Text = dataRow.Field<string>("Nama");
                                     xrException351.Text = dataRow.Field<string>("Jabatan");
@@ -1068,8 +1053,8 @@ namespace DXMNCGUI_INFORMA.Shared
                                         picBoxException16.Visible = dataRow.Field<string>("DecisionState") == "REJECT" ? true : false;
                                         lblException15.Visible = true;
                                         lblException15.Text = "Date : " + dataRow.Field<DateTime>("DecisionDate").ToString("dd/MM/yyyy HH:mm:ss");
-                                        lblException16.Visible = true;
-                                        lblException16.Text = "Note : " + dataRow.Field<string>("DecisionNote");
+                                        xrTableCell72me.Visible = true;
+                                        xrTableCell72me.Text = "Note : " + dataRow.Field<string>("DecisionNote");
                                     }
                                     xrException83.Text = dataRow.Field<string>("Nama");
                                     xrException90.Text = dataRow.Field<string>("Jabatan");
@@ -1081,8 +1066,8 @@ namespace DXMNCGUI_INFORMA.Shared
                                         picBoxException18.Visible = dataRow.Field<string>("DecisionState") == "REJECT" ? true : false;
                                         lblException17.Visible = true;
                                         lblException17.Text = "Date : " + dataRow.Field<DateTime>("DecisionDate").ToString("dd/MM/yyyy HH:mm:ss");
-                                        lblException18.Visible = true;
-                                        lblException18.Text = "Note : " + dataRow.Field<string>("DecisionNote");
+                                        xrTableCell94me.Visible = true;
+                                        xrTableCell94me.Text = "Note : " + dataRow.Field<string>("DecisionNote");
                                     }
                                     xrException95.Text = dataRow.Field<string>("Nama");
                                     xrException98.Text = dataRow.Field<string>("Jabatan");
