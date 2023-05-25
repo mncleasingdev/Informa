@@ -236,7 +236,7 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo.FreeTemplate
                     SqlParameter sqlParameter9 = sqlCommand.Parameters.Add("@DecisionDate", SqlDbType.DateTime);
                     sqlParameter9.Value = DBNull.Value;
                     sqlParameter9.Direction = ParameterDirection.Input;
-                    SqlParameter sqlParameter10 = sqlCommand.Parameters.Add("@DecisionNote", SqlDbType.NVarChar, 250);
+                    SqlParameter sqlParameter10 = sqlCommand.Parameters.Add("@DecisionNote", SqlDbType.NVarChar, -1);
                     sqlParameter10.Value = "";
                     sqlParameter10.Direction = ParameterDirection.Input;
 
@@ -329,7 +329,7 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo.FreeTemplate
                     SqlParameter sqlParameter5 = sqlCommand.Parameters.Add("@DecisionDate", SqlDbType.DateTime);
                     sqlParameter5.Value = myLocalDBSetting.GetServerTime();
                     sqlParameter5.Direction = ParameterDirection.Input;
-                    SqlParameter sqlParameter6 = sqlCommand.Parameters.Add("@DecisionNote", SqlDbType.NVarChar, 250);
+                    SqlParameter sqlParameter6 = sqlCommand.Parameters.Add("@DecisionNote", SqlDbType.NVarChar, -1);
                     sqlParameter6.Value = strApprovalNote;
                     sqlParameter6.Direction = ParameterDirection.Input;
                     sqlCommand.ExecuteNonQuery();
@@ -355,7 +355,7 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo.FreeTemplate
                     SqlParameter sqlParameter5 = sqlCommand.Parameters.Add("@DecisionDate", SqlDbType.DateTime);
                     sqlParameter5.Value = myLocalDBSetting.GetServerTime();
                     sqlParameter5.Direction = ParameterDirection.Input;
-                    SqlParameter sqlParameter6 = sqlCommand.Parameters.Add("@DecisionNote", SqlDbType.NVarChar, 250);
+                    SqlParameter sqlParameter6 = sqlCommand.Parameters.Add("@DecisionNote", SqlDbType.NVarChar, -1);
                     sqlParameter6.Value = strApprovalNote;
                     sqlParameter6.Direction = ParameterDirection.Input;
                     sqlCommand.ExecuteNonQuery();
