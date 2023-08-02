@@ -180,9 +180,9 @@ namespace DXMNCGUI_INFORMA.Shared
 
                         DevExpress.DataAccess.Sql.SqlDataSource ds1 = docInternalMemoPemakaianCashColl.DataSource as DevExpress.DataAccess.Sql.SqlDataSource;
                         ds1.ConnectionName = "SqlLocalConnectionString";
-                        //ds1.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\MNCGUI", "INFORMA", "sa", "invictus14", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
+                        //ds1.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\MNCGUI", "INFORMA2", "sa", "invictus14", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
                         ds1.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("MNCGUI-NONCORE", "INFORMA2", "applogin", "Gr3atMNC", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
-                        //ds1.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("192.168.1.10", "INFORMA", "mncl", "Mncleasing123", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
+                        //ds1.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("192.168.1.10", "INFORMA2", "mncl", "Mncleasing123", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
 
                         dvrMain.Report = docInternalMemoPemakaianCashColl;
                         break;
@@ -339,9 +339,9 @@ namespace DXMNCGUI_INFORMA.Shared
 
                         DevExpress.DataAccess.Sql.SqlDataSource ds2 = docInternalMemoPelepasanCrossColl.DataSource as DevExpress.DataAccess.Sql.SqlDataSource;
                         ds2.ConnectionName = "SqlLocalConnectionString";
-                        //ds2.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\MNCGUI", "INFORMA", "sa", "invictus14", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
+                        //ds2.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\MNCGUI", "INFORMA2", "sa", "invictus14", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
                         ds2.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("MNCGUI-NONCORE", "INFORMA2", "applogin", "Gr3atMNC", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
-                        //ds2.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("192.168.1.10", "INFORMA", "mncl", "Mncleasing123", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
+                        //ds2.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("192.168.1.10", "INFORMA2", "mncl", "Mncleasing123", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
 
 
                         dvrMain.Report = docInternalMemoPelepasanCrossColl;
@@ -481,9 +481,9 @@ namespace DXMNCGUI_INFORMA.Shared
 
                         DevExpress.DataAccess.Sql.SqlDataSource ds3 = docInternalMemoPendingGiro.DataSource as DevExpress.DataAccess.Sql.SqlDataSource;
                         ds3.ConnectionName = "SqlLocalConnectionString";
-                        //ds3.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\SQLEXPRESS", "INFORMA","","", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.Windows);
+                        //ds3.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\SQLEXPRESS", "INFORMA2","","", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.Windows);
                         ds3.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("MNCGUI-NONCORE", "INFORMA2", "applogin", "Gr3atMNC", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
-                        //ds3.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("192.168.1.10", "INFORMA", "mncl", "Mncleasing123", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
+                        //ds3.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("192.168.1.10", "INFORMA2", "mncl", "Mncleasing123", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
 
 
                         dvrMain.Report = docInternalMemoPendingGiro;
@@ -590,7 +590,7 @@ namespace DXMNCGUI_INFORMA.Shared
 
                         DevExpress.DataAccess.Sql.SqlDataSource ds4 = docInternalMemoPermohonanBarangJasa.DataSource as DevExpress.DataAccess.Sql.SqlDataSource;
                         ds4.ConnectionName = "SqlLocalConnectionString";
-                        //ds4.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\MNCGUI", "INFORMA", "sa", "invictus14", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
+                        //ds4.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\MNCGUI", "INFORMA2", "sa", "invictus14", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
                         ds4.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("MNCGUI-NONCORE", "INFORMA2", "applogin", "Gr3atMNC", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
 
                         dvrMain.Report = docInternalMemoPermohonanBarangJasa;
@@ -635,7 +635,7 @@ namespace DXMNCGUI_INFORMA.Shared
 
                         DevExpress.DataAccess.Sql.SqlDataSource ds5 = docInternalMemoBiayaBulanan.DataSource as DevExpress.DataAccess.Sql.SqlDataSource;
                         ds5.ConnectionName = "SqlLocalConnectionString";
-                        //ds5.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\MNCGUI", "INFORMA", "sa", "invictus14", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
+                        //ds5.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\MNCGUI", "INFORMA2", "sa", "invictus14", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
                         ds5.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("MNCGUI-NONCORE", "INFORMA2", "applogin", "Gr3atMNC", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
 
                         dvrMain.Report = docInternalMemoBiayaBulanan;
@@ -864,9 +864,9 @@ namespace DXMNCGUI_INFORMA.Shared
 
                         DevExpress.DataAccess.Sql.SqlDataSource ds8 = docInternalMemoDeviasi.DataSource as DevExpress.DataAccess.Sql.SqlDataSource;
                         ds8.ConnectionName = "SqlLocalConnectionString";
-                        //ds8.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\SQLEXPRESS", "INFORMA", "", "", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.Windows);
+                        //ds8.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\SQLEXPRESS", "INFORMA2", "", "", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.Windows);
                         ds8.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("MNCGUI-NONCORE", "INFORMA2", "applogin", "Gr3atMNC", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
-                        //ds8.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("192.168.1.10", "INFORMA", "mncl", "Mncleasing123", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
+                        //ds8.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("192.168.1.10", "INFORMA2", "mncl", "Mncleasing123", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
 
                         dvrMain.Report = docInternalMemoDeviasi;
                         break;
@@ -1078,9 +1078,9 @@ namespace DXMNCGUI_INFORMA.Shared
 
                         DevExpress.DataAccess.Sql.SqlDataSource ds9 = docInternalMemoException.DataSource as DevExpress.DataAccess.Sql.SqlDataSource;
                         ds9.ConnectionName = "SqlLocalConnectionString";
-                        //ds9.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\SQLEXPRESS", "INFORMA", "", "", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.Windows);
+                        //ds9.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters(".\\SQLEXPRESS", "INFORMA2", "", "", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.Windows);
                         ds9.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("MNCGUI-NONCORE", "INFORMA2", "applogin", "Gr3atMNC", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
-                        //ds9.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("192.168.1.10", "INFORMA", "mncl", "Mncleasing123", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
+                        //ds9.ConnectionParameters = new DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters("192.168.1.10", "INFORMA2", "mncl", "Mncleasing123", DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer);
 
                         dvrMain.Report = docInternalMemoException;
                         break;
@@ -1096,7 +1096,7 @@ namespace DXMNCGUI_INFORMA.Shared
         protected void LoadTemplate()
         {
             DataTable loadDoc = new DataTable();
-            loadDoc = localdbsetting.GetDataTable("SELECT * FROM [INFORMA].[dbo].[FreeTextTemplate] WHERE id = 25", false);
+            loadDoc = localdbsetting.GetDataTable("SELECT * FROM [INFORMA2].[dbo].[FreeTextTemplate] WHERE id = 25", false);
             string strRitchEditorKey = Guid.NewGuid().ToString();
 
             foreach (DataRow dr in loadDoc.Rows)

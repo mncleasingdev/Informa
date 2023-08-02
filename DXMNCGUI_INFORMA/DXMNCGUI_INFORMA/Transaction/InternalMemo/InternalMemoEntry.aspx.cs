@@ -2055,7 +2055,7 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo
         protected void LoadTemplate()
         {
             DataTable loadDoc = new DataTable();
-            loadDoc = localdbsetting.GetDataTable("SELECT * FROM [INFORMA].[dbo].[FreeTextTemplate] WHERE id = 25", false);
+            loadDoc = localdbsetting.GetDataTable("SELECT * FROM [INFORMA2].[dbo].[FreeTextTemplate] WHERE id = 25", false);
             strRitchEditorKey = Guid.NewGuid().ToString();
 
             foreach (DataRow dr in loadDoc.Rows)
@@ -2067,7 +2067,7 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo
         protected void LoadTemplateFullDoc()
         {
             DataTable loadDoc = new DataTable();
-            loadDoc = localdbsetting.GetDataTable("SELECT * FROM [INFORMA].[dbo].[FreeTextTemplate] WHERE id = 25", false);
+            loadDoc = localdbsetting.GetDataTable("SELECT * FROM [INFORMA2].[dbo].[FreeTextTemplate] WHERE id = 25", false);
             strRitchEditorKey = Guid.NewGuid().ToString();
 
             foreach (DataRow dr in loadDoc.Rows)
