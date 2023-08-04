@@ -146,7 +146,7 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo
             string sSQLDetailPendingGiro = "SELECT * FROM dbo.InternalMemoDetailPendingGiro WHERE DocKey=@DocKey ORDER BY Seq";
             string sSQLDetailPurchaseRequest = "SELECT * FROM dbo.InternalMemoDetailPurchaseRequest WHERE DocKey=@DocKey ORDER BY Seq";
             string sSQLDetailBiayaBulanan = "SELECT * FROM dbo.InternalMemoDetailBiayaBulanan WHERE DocKey=@DocKey ORDER BY Seq";
-            string sSQLDetailFreeText = "SELECT * FROM [INFORMA2].[dbo].[InternalMemoDetailFreeText] WHERE DocKey=@DocKey ORDER BY Seq";
+            string sSQLDetailFreeText = "SELECT * FROM [INFORMA].[dbo].[InternalMemoDetailFreeText] WHERE DocKey=@DocKey ORDER BY Seq";
             string sSQLApproval = @"SELECT * FROM dbo.InternalMemoApprovalList WHERE DocKey = @DocKey ORDER BY Seq";
             string sSQLUploadDoc = @"SELECT ROW_NUMBER() OVER (ORDER BY ID) AS No, [ID] ,[Name] ,[Type] ,[Ext] ,[Remarks] ,[FileDoc] ,[AppNo] ,[CreatedBy] ,[CreatedDateTime], [AgreeNo] FROM [SSS].[dbo].[DocumentFile] WHERE MemoNo=@MemoNo";
             string sSQLApprovalHistory = @"select

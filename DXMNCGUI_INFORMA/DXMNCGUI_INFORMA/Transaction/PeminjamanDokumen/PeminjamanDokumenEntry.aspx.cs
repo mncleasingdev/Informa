@@ -445,7 +445,7 @@ namespace DXMNCGUI_INFORMA.Transaction.PeminjamanDokumen
             {
                 foreach(DataRow dr in myDetailTable.Rows)
                 {
-                    string ssql = @"INSERT INTO [INFORMA2].[dbo].[PeminjamanDokumenHistory] ([DocKey],[DocNo],[DocDate],[DocCategory],[Department],[PengajuanStatus],[Keperluan],[Remarks], 
+                    string ssql = @"INSERT INTO [INFORMA].[dbo].[PeminjamanDokumenHistory] ([DocKey],[DocNo],[DocDate],[DocCategory],[Department],[PengajuanStatus],[Keperluan],[Remarks], 
                         [TglPeminjaman],[TglPengembalian],[DocID],[DocDesc],[DocStatus],[CreatedBy],[CreatedDate])
                         VALUES(@DocKey,@DocNo,@DocDate,@DocCategory,@Department,@PengajuanStatus,@Keperluan,@Remarks,@TglPeminjaman,@TglPengembalian,@DocID,@DocDesc,@DocStatus,@CreatedBy,GETDATE())";
 
@@ -515,7 +515,7 @@ namespace DXMNCGUI_INFORMA.Transaction.PeminjamanDokumen
         protected DataTable getDataApproval(string value)
         {
             DataTable res = new DataTable();
-            string ssql = "select * from [INFORMA2].[dbo].[PeminjamanDokumenApprovalList] where DocKey = ?";
+            string ssql = "select * from [INFORMA].[dbo].[PeminjamanDokumenApprovalList] where DocKey = ?";
             res = myLocalDBSetting.GetDataTable(ssql, false, value);
 
             return res;
