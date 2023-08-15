@@ -1664,7 +1664,8 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo
                     DateTime.Parse(Convert.ToString(e.NewValues["TglJatuhTempo"])),
                     Double.Parse(Convert.ToString(e.NewValues["LamaPenundaan"])),
                     DateTime.Parse(Convert.ToString(e.NewValues["TglDiJalankanKembali"])),
-                    Convert.ToInt32(e.NewValues["GiroOverdue"])
+                    Convert.ToInt32(e.NewValues["GiroOverdue"]),
+                    DateTime.Parse(Convert.ToString(e.NewValues["TglJalanGiro"]))
                     );
 
                 ASPxGridView grid = sender as ASPxGridView;
@@ -1694,6 +1695,7 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo
                 dr["LamaPenundaan"] = Double.Parse(Convert.ToString(e.NewValues["LamaPenundaan"]));
                 dr["TglDiJalankanKembali"] = DateTime.Parse(Convert.ToString(e.NewValues["TglDiJalankanKembali"]));
                 dr["GiroOverdue"] = Convert.ToInt32(e.NewValues["GiroOverdue"]);
+                dr["TglJalanGiro"] = Convert.ToInt32(e.NewValues["TglJalanGiro"]);
 
                 ASPxGridView grid = sender as ASPxGridView;
                 grid.CancelEdit();
@@ -1761,7 +1763,7 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo
             if (string.IsNullOrEmpty(agreementno)) return;
 
             cmb.DataSourceID = null;
-            cmb.DataSource = myDBSetting.GetDataTable(@"select B.CHEQNO, B.CHEQBANKPDC, B.CHEQAMOUNT, B.EFFECT_DATE as CHEQDATE from ACC_PDCLEASING_REGIS A
+            cmb.DataSource = myDBSetting.GetDataTable(@"select B.CHEQNO, B.CHEQBANKPDC, B.CHEQAMOUNT, B.EFFECT_DATE as CHEQDATE, WARKAT_DATE as TglJalanGiro from ACC_PDCLEASING_REGIS A
                                                             inner join ACC_PDCLEASING B on A.REGIS_NO=B.REGIS_NO and A.C_CODE=B.C_CODE
                                                             where a.LSAGREE=?", false, agreementno);
             cmb.DataBindItems();

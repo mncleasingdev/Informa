@@ -859,7 +859,7 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo
                 foreach (DataRow dataRow in ds.Tables["DetailPendingGiro"].Rows)
                 {
 
-                    SqlCommand sqlCommand = new SqlCommand("INSERT INTO [dbo].[InternalMemoDetailPendingGiro] (DtlKey, DocKey, Seq, NamaDebitur, AgreementNo, NamaBank, NoGiro, NominalGiro, AngsuranDariKe, TglJatuhTempo, LamaPenundaan, TglDiJalankanKembali, GiroOverdue) VALUES (@DtlKey, @DocKey, @Seq, @NamaDebitur, @AgreementNo, @NamaBank, @NoGiro, @NominalGiro, @AngsuranDariKe, @TglJatuhTempo, @LamaPenundaan, @TglDiJalankanKembali, @GiroOverdue)");
+                    SqlCommand sqlCommand = new SqlCommand("INSERT INTO [dbo].[InternalMemoDetailPendingGiro] (DtlKey, DocKey, Seq, NamaDebitur, AgreementNo, NamaBank, NoGiro, NominalGiro, AngsuranDariKe, TglJatuhTempo, LamaPenundaan, TglDiJalankanKembali, GiroOverdue, TglJalanGiro) VALUES (@DtlKey, @DocKey, @Seq, @NamaDebitur, @AgreementNo, @NamaBank, @NoGiro, @NominalGiro, @AngsuranDariKe, @TglJatuhTempo, @LamaPenundaan, @TglDiJalankanKembali, @GiroOverdue, @TglJalanGiro)");
                     sqlCommand.Connection = myconn;
                     sqlCommand.Transaction = trans;
 
@@ -899,10 +899,12 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo
                     SqlParameter sqlParameter11 = sqlCommand.Parameters.Add("@TglDiJalankanKembali", SqlDbType.DateTime);
                     sqlParameter11.Value = dataRow.Field<DateTime>("TglDiJalankanKembali");
                     sqlParameter11.Direction = ParameterDirection.Input;
-
                     SqlParameter sqlParameter12 = sqlCommand.Parameters.Add("@GiroOverdue", SqlDbType.Int);
                     sqlParameter12.Value = dataRow.Field<int>("GiroOverdue");
                     sqlParameter12.Direction = ParameterDirection.Input;
+                    SqlParameter sqlParameter13 = sqlCommand.Parameters.Add("@TglJalanGiro", SqlDbType.DateTime);
+                    sqlParameter13.Value = dataRow.Field<DateTime>("TglJalanGiro");
+                    sqlParameter13.Direction = ParameterDirection.Input;
                     sqlCommand.ExecuteNonQuery();
                 }
                 trans.Commit();

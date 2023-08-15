@@ -184,6 +184,7 @@
             gvDetailPendingGiro.GetEditor("colNamaBank").SetValue(s.GetSelectedItem().GetColumnText('CHEQBANKPDC'));
             gvDetailPendingGiro.GetEditor("colNominalGiro").SetValue(s.GetSelectedItem().GetColumnText('CHEQAMOUNT'));
             gvDetailPendingGiro.GetEditor("colTgljatuhTempoGiro").SetValue(new Date(s.GetSelectedItem().GetColumnText('CHEQDATE')));
+            gvDetailPendingGiro.GetEditor("colTglJalanGiro").SetValue(new Date(s.GetSelectedItem().GetColumnText('TglJalanGiro')));
         }
         function diffDay() {
             var date1 = gvDetailPendingGiro.GetEditValue("colTgljatuhTempoGiro");
@@ -970,6 +971,7 @@
                                                                     <dx:ListBoxColumn FieldName="CHEQBANKPDC" Caption="Bank" />
                                                                     <dx:ListBoxColumn FieldName="CHEQAMOUNT" Caption="Nominal" />
                                                                     <dx:ListBoxColumn FieldName="CHEQDATE" Caption="Cheq Date." />
+                                                                    <dx:ListBoxColumn FieldName="TglJalanGiro" Caption="Tgl Jalan" />
                                                                 </Columns>
                                                                 <ValidationSettings ValidateOnLeave="true" ValidationGroup="ValidationSave" Display="Dynamic" ErrorDisplayMode="ImageWithText">
                                                                     <RequiredField ErrorText="* Value can't be empty." IsRequired="true" />
@@ -1027,6 +1029,10 @@
                                                             <PropertiesTextEdit Style-BackColor="#f7faff"></PropertiesTextEdit>
                                                             <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
                                                         </dx:GridViewDataTextColumn>
+                                                        <dx:GridViewDataDateColumn Name="colTglJalanGiro" FieldName="TglJalanGiro" Caption="Tgl. Jalan Giro" PropertiesDateEdit-DisplayFormatString="dd/MM/yyyy">
+                                                            <PropertiesDateEdit DisplayFormatString="dd/MM/yyyy"></PropertiesDateEdit>
+                                                            <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
+                                                        </dx:GridViewDataDateColumn>
                                                     </Columns>
                                                 </dx:ASPxGridView>
                                             </dx:LayoutItemNestedControlContainer>

@@ -343,6 +343,7 @@ namespace DXMNCGUI_INFORMA.Transaction.InternalMemo
             row["LamaPenundaan"] = DBNull.Value;
             row["TglDiJalankanKembali"] = DBNull.Value;
             row["GiroOverdue"] = DBNull.Value;
+            row["TglJalanGiro"] = DBNull.Value;
             row.EndEdit();
             this.myDetailPendingGiroTable.Rows.Add(row);
             return new PendingGiroRecord(row, this);
