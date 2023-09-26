@@ -996,9 +996,20 @@
                                                             <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
                                                             <PropertiesSpinEdit Style-BackColor="#f7faff"></PropertiesSpinEdit>
                                                         </dx:GridViewDataSpinEditColumn>
+                                                        <dx:GridViewDataDateColumn Name="colTglJalanGiro" FieldName="TglJalanGiro" Caption="Tgl. Jalan Giro" PropertiesDateEdit-DisplayFormatString="dd/MM/yyyy">
+                                                            <PropertiesDateEdit DisplayFormatString="dd/MM/yyyy"></PropertiesDateEdit>
+                                                            <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
+                                                        </dx:GridViewDataDateColumn>
                                                         <dx:GridViewDataDateColumn Name="colTgljatuhTempoGiro" FieldName="TglJatuhTempo" Caption="Tgl. Jatuh Tempo" PropertiesDateEdit-DisplayFormatString="dd/MM/yyyy" ReadOnly="true">
                                                             <PropertiesDateEdit Style-BackColor="#f7faff" DisplayFormatString="dd/MM/yyyy"></PropertiesDateEdit>
                                                             <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
+                                                        </dx:GridViewDataDateColumn>
+                                                        <dx:GridViewDataDateColumn Name="colTgldijalankanKembali" FieldName="TglDiJalankanKembali" Caption="Tgl. di Jalankan Kembali" PropertiesDateEdit-DisplayFormatString="dd/MM/yyyy">
+                                                            <PropertiesDateEdit DisplayFormatString="dd/MM/yyyy"></PropertiesDateEdit>
+                                                            <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
+                                                            <PropertiesDateEdit>
+                                                                <ClientSideEvents DateChanged="diffDay" />
+                                                            </PropertiesDateEdit>
                                                         </dx:GridViewDataDateColumn>
                                                         <dx:GridViewDataSpinEditColumn
                                                             Name="colLamaPenundaan"
@@ -1015,13 +1026,6 @@
                                                             <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
                                                             <PropertiesSpinEdit Style-BackColor="#f7faff"></PropertiesSpinEdit>
                                                         </dx:GridViewDataSpinEditColumn>
-                                                        <dx:GridViewDataDateColumn Name="colTgldijalankanKembali" FieldName="TglDiJalankanKembali" Caption="Tgl. di Jalankan Kembali" PropertiesDateEdit-DisplayFormatString="dd/MM/yyyy">
-                                                            <PropertiesDateEdit DisplayFormatString="dd/MM/yyyy"></PropertiesDateEdit>
-                                                            <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
-                                                            <PropertiesDateEdit>
-                                                                <ClientSideEvents DateChanged="diffDay" />
-                                                            </PropertiesDateEdit>
-                                                        </dx:GridViewDataDateColumn>
                                                         <dx:GridViewDataTextColumn Name="colAngsuranDariKe" FieldName="AngsuranDariKe" Caption="Angsuran Ke / Dari" ShowInCustomizationForm="True">
                                                             <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
                                                         </dx:GridViewDataTextColumn>
@@ -1029,10 +1033,6 @@
                                                             <PropertiesTextEdit Style-BackColor="#f7faff"></PropertiesTextEdit>
                                                             <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
                                                         </dx:GridViewDataTextColumn>
-                                                        <dx:GridViewDataDateColumn Name="colTglJalanGiro" FieldName="TglJalanGiro" Caption="Tgl. Jalan Giro" PropertiesDateEdit-DisplayFormatString="dd/MM/yyyy">
-                                                            <PropertiesDateEdit DisplayFormatString="dd/MM/yyyy"></PropertiesDateEdit>
-                                                            <HeaderStyle Font-Bold="true" ForeColor="#1872c4" />
-                                                        </dx:GridViewDataDateColumn>
                                                     </Columns>
                                                 </dx:ASPxGridView>
                                             </dx:LayoutItemNestedControlContainer>
